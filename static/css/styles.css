@@ -73,21 +73,21 @@ hr {
   width: 90%;
   margin: 0 auto; }
 
-#quote-header {
+#fact-header {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  #quote-header #header-img {
+  #fact-header #header-img {
     height: 15em;
     margin-top: 2em; }
 
-#quote {
+#fact {
   font-family: "Roboto Slab", serif;
   font-size: 3em;
   text-align: center; }
 
-#quote-context {
+#fact-context {
   width: 50%;
   font-family: "Arimo", sans-serif;
   font-size: 1.2em;
@@ -127,19 +127,19 @@ hr {
     border: 0; }
 
 @media (max-width: 600px) {
-  #quote-header {
+  #fact-header {
     flex-direction: column; }
-    #quote-header button {
+    #fact-header button {
       width: 100%; }
 
   #header-img {
     display: none; }
 
-  #quote-context {
+  #fact-context {
     width: 80%;
     font-size: 1em; }
 
-  #quote {
+  #fact {
     font-size: 2em; } }
 @media (max-width: 800px) {
   .topic-media {

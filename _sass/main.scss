@@ -5,7 +5,7 @@
 @import 'buttons';
 
 body {
-  font-family: $bernie-quote-font;
+  font-family: $bernie-fact-font;
   background: $bernie-blue;
   color: white;
   overflow-x: hidden;
@@ -31,7 +31,7 @@ hr {
   margin: 0 auto;
 }
 
-#quote-header {
+#fact-header {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -43,13 +43,13 @@ hr {
   }
 }
 
-#quote {
-  font-family: $bernie-quote-font;
+#fact {
+  font-family: $bernie-fact-font;
   font-size: 3em;
   text-align: center;
 }
 
-#quote-context {
+#fact-context {
   width: 50%;
   font-family: $bernie-font;
   font-size: 1.2em;
@@ -112,7 +112,7 @@ hr {
 }
 
 @media (max-width: 600px) {
-  #quote-header {
+  #fact-header {
     flex-direction: column;
     button {
       width: 100%;
@@ -123,12 +123,12 @@ hr {
     display: none;
   }
 
-  #quote-context {
+  #fact-context {
     width: 80%;
     font-size: 1em;
   }
 
-  #quote {
+  #fact {
     font-size: 2em;
   }
 }
