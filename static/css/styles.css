@@ -3,22 +3,81 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: white;
-  padding: 0 1em; }
+  padding: 0 1em;
+  -moz-box-shadow: 0 1px 0 1px black;
+  -webkit-box-shadow: 0 1px 0 1px black;
+  box-shadow: 0 1px 0 1px black; }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   background: #0066ba; }
 
-.logo-bern {
-  color: #0066ba; }
+.logo {
+  text-shadow: 1px 1px darkgray; }
+  .logo .logo-bern {
+    color: #0066ba; }
+  .logo .logo-facts {
+    color: #f55b5b; }
 
-.logo-facts {
-  color: #f55b5b; }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto; }
+
+#quote {
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
+  font-size: 2.8em;
+  text-align: center;
+  color: white; }
+
+#quote-context {
+  width: 50%;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  color: white; }
+
+#header-img {
+  height: 15em;
+  margin-top: 2em; }
+
+.button-container {
+  display: flex;
+  justify-content: center; }
+  .button-container button {
+    margin: 1em;
+    padding: 1em;
+    width: 10em;
+    border: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px gray; }
+    .button-container button#new-quote {
+      background: #f55b5b; }
+    .button-container button#contribute {
+      background: #45d363; }
 
 @media (max-width: 500px) {
   nav {
     flex-direction: column; }
     nav .subtitle {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  #quote-context {
+    width: 80%;
+    font-size: 1em; }
+
+  #quote {
+    font-size: 2em; }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center; }
+    .button-container button {
+      width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
