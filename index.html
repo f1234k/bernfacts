@@ -43,7 +43,7 @@
         <p>Spread the word of Bernie Sanders.</p>
         <div class="topic-media">
           <div>
-            <img src="/static/img/bernie-vs-hillary.jpg" alt="Bernie vs. Hillary">
+            <img src="static/img/bernie-vs-hillary.jpg" alt="Bernie vs. Hillary">
             <p><a href="http://bernieorhillary.jaxbot.me/">Bernie vs. Hillary</a></p>
           </div>
           <div>
@@ -110,7 +110,7 @@
 
         $('#new-fact').click(addRandomFactToDOM);
 
-        $.getJSON('/static/data.json').done(function(data) {
+        $.getJSON('static/data.json').done(function(data) {
           facts = data;
           addRandomFactToDOM();
         });
