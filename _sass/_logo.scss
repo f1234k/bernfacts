@@ -1,0 +1,13 @@
+.logo {
+  margin: .3em 0;
+  font-weight: bold;
+  color: $bernie-blue;
+
+  &.logo-white {
+    color: white;
+  }
+
+  .logo-facts {
+    color: $bernie-red;
+  }
+}

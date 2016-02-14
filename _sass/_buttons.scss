@@ -1,0 +1,31 @@
+@mixin btn($color) {
+  background: $color;
+
+  &:hover {
+    background: lighten($color, 10%);
+
+  }
+
+  -webkit-transition: background 500ms ease-in-out;
+  -moz-transition: background 500ms ease-in-out;
+  -o-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+
+button {
+  margin: 1em;
+  padding: 1em;
+  width: 10em;
+  border: 0;
+  font-size: 1.2em;
+  border-radius: .3em;
+  outline: 0;
+
+  &.btn-red {
+    @include btn($bernie-red);
+  }
+
+  &.btn-green {
+    @include btn($bernie-green);
+  }
+}

@@ -1,23 +1,62 @@
+.logo {
+  margin: .3em 0;
+  font-weight: bold;
+  color: #0066ba; }
+  .logo.logo-white {
+    color: white; }
+  .logo .logo-facts {
+    color: #f55b5b; }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
   padding: 0 1em;
-  -moz-box-shadow: 0 1px 0 1px black;
-  -webkit-box-shadow: 0 1px 0 1px black;
-  box-shadow: 0 1px 0 1px black; }
+  background: white; }
+  nav .subtitle {
+    color: black; }
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; }
+    nav .subtitle {
+      margin-top: 0; } }
+footer {
+  background: #0066ba;
+  text-align: center; }
+
+button {
+  margin: 1em;
+  padding: 1em;
+  width: 10em;
+  border: 0;
+  font-size: 1.2em;
+  border-radius: .3em;
+  outline: 0; }
+  button.btn-red {
+    background: #f55b5b;
+    -webkit-transition: background 500ms ease-in-out;
+    -moz-transition: background 500ms ease-in-out;
+    -o-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out; }
+    button.btn-red:hover {
+      background: #f88b8b; }
+  button.btn-green {
+    background: #45d363;
+    -webkit-transition: background 500ms ease-in-out;
+    -moz-transition: background 500ms ease-in-out;
+    -o-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out; }
+    button.btn-green:hover {
+      background: #6edd86; }
 
 body {
   font-family: "Roboto Slab", serif;
-  background: #0066ba; }
+  background: #0066ba;
+  color: white; }
 
-.logo {
-  text-shadow: 1px 1px darkgray; }
-  .logo .logo-bern {
-    color: #0066ba; }
-  .logo .logo-facts {
-    color: #f55b5b; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
 
 .container {
   display: flex;
@@ -28,17 +67,14 @@ body {
 
 #quote {
   font-family: "Roboto Slab", serif;
-  font-weight: normal;
   font-size: 2.8em;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 #quote-context {
   width: 50%;
   font-family: "Arimo", sans-serif;
   font-size: 1.2em;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 #header-img {
   height: 15em;
@@ -47,26 +83,22 @@ body {
 .button-container {
   display: flex;
   justify-content: center; }
-  .button-container button {
-    margin: 1em;
-    padding: 1em;
-    width: 10em;
-    border: 0;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 1px 1px gray; }
-    .button-container button#new-quote {
-      background: #f55b5b; }
-    .button-container button#contribute {
-      background: #45d363; }
 
-@media (max-width: 500px) {
-  nav {
-    flex-direction: column; }
-    nav .subtitle {
-      margin-top: 0; }
+.contribute-topics h2 {
+  text-align: center;
+  margin-bottom: 2em; }
+.contribute-topics div {
+  padding: 3em 5%; }
+  .contribute-topics div h3 {
+    font-size: 2em; }
+.contribute-topics > :nth-child(2) {
+  background: #45d363; }
+.contribute-topics > :nth-child(3) {
+  background: rebeccapurple; }
+.contribute-topics > :nth-child(4) {
+  background: #f55b5b; }
 
+@media (max-width: 600px) {
   #quote-context {
     width: 80%;
     font-size: 1em; }

@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  background: white;
+
+  .subtitle {
+    color: black;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+
+    .subtitle {
+      margin-top: 0;
+    }
+  }
+}

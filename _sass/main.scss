@@ -1,38 +1,18 @@
-$bernie-blue: #0066ba;
-$bernie-red: #f55b5b;
-$bernie-green: #45d363;
-$bernie-font: 'Arimo', sans-serif;
-$bernie-quote-font: 'Roboto Slab', serif;
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 0 1em;
-
-  -moz-box-shadow:    0 1px 0 1px black;
-  -webkit-box-shadow: 0 1px 0 1px black;
-  box-shadow:         0 1px 0 1px black;
-}
+@import 'variables';
+@import 'logo';
+@import 'nav';
+@import 'footer';
+@import 'buttons';
 
 body {
   font-family: $bernie-quote-font;
   background: $bernie-blue;
+  color: white;
 }
 
-.logo {
-  text-shadow: 1px 1px darkgray;
-
-  .logo-bern {
-    color: $bernie-blue;
-  }
-
-  .logo-facts {
-    color: $bernie-red;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
-
 
 .container {
   display: flex;
@@ -44,10 +24,8 @@ body {
 
 #quote {
   font-family: $bernie-quote-font;
-  font-weight: normal;
   font-size: 2.8em;
   text-align: center;
-  color: white;
 }
 
 #quote-context {
@@ -55,7 +33,6 @@ body {
   font-family: $bernie-font;
   font-size: 1.2em;
   text-align: center;
-  color: white;
 }
 
 #header-img {
@@ -66,35 +43,37 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
+}
 
-  button {
-    margin: 1em;
-    padding: 1em;
-    width: 10em;
-    border: 0;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 1px 1px gray;
+.contribute-topics {
 
-    &#new-quote {
-      background: $bernie-red;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  div {
+    padding: 3em 5%;
+
+    h3 {
+      font-size: 2em;
     }
+  }
 
-    &#contribute {
-      background: $bernie-green;
-    }
+  > :nth-child(2) {
+    background: $bernie-green;
+  }
+
+  > :nth-child(3) {
+    background: rebeccapurple;
+  }
+
+  > :nth-child(4) {
+    background: $bernie-red;
   }
 }
 
-@media (max-width: 500px) {
-  nav {
-    flex-direction: column;
-
-    .subtitle {
-      margin-top: 0;
-    }
-  }
+@media (max-width: 600px) {
 
   #quote-context {
     width: 80%;
