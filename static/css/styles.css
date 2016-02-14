@@ -73,9 +73,14 @@ hr {
   width: 90%;
   margin: 0 auto; }
 
-#header-img {
-  height: 15em;
-  margin-top: 2em; }
+#quote-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  #quote-header #header-img {
+    height: 15em;
+    margin-top: 2em; }
 
 #quote {
   font-family: "Roboto Slab", serif;
@@ -87,10 +92,6 @@ hr {
   font-family: "Arimo", sans-serif;
   font-size: 1.2em;
   text-align: center; }
-
-.button-container {
-  display: flex;
-  justify-content: center; }
 
 .contribute-topics {
   margin: 9em 0 0 0; }
@@ -126,18 +127,20 @@ hr {
     border: 0; }
 
 @media (max-width: 600px) {
+  #quote-header {
+    flex-direction: column; }
+    #quote-header button {
+      width: 100%; }
+
+  #header-img {
+    display: none; }
+
   #quote-context {
     width: 80%;
     font-size: 1em; }
 
   #quote {
-    font-size: 2em; }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center; }
-    .button-container button {
-      width: 100%; } }
+    font-size: 2em; } }
 @media (max-width: 800px) {
   .topic-media {
     flex-direction: column;
