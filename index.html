@@ -19,27 +19,38 @@
     </nav>
     <div class="container">
       <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Bernie_Sanders.jpg" alt="Bernie Sanders">
-      <h2 id="quote">Bernie believes in creating a strong, educated workforce by providing a free college education.</h2>
-      <div id="quote-context">
-        <p>How? By reforming the student loan system to stop taking advantage of students. Also, by taxing Wall Street and ensuring that colleges are accountable for providing quality education to students.</p>
-      </div>
+      <h2 id="quote">Loading...</h2>
+      <div id="quote-context"></div>
+      <ul id="sources"></ul>
       <div class="button-container">
         <button id="new-quote" class="btn-red">Another!</button>
         <button id="contribute" class="btn-green">I want President Sanders</button>
       </div>
     </div>
-    <div class="contribute-topics">
+    <div id="contribute-topics" class="contribute-topics">
+      <hr>
       <h2>You can help elect President Bernie Sanders</h2>
-      <div>
+      <div class="topic">
         <h3>Donate or volunteer for Bernie's campaign.</h3>
+        <p><a href="https://secure.actblue.com/contribute/page/lets-go-bernie" target="_blank">Click here to donate to Bernie's official campaign.</a> Funded by the people (not the billionaires).</p>
       </div>
-      <div>
+      <div class="topic">
         <h3>Share videos and create dank memes</h3>
         <p>Spread the word of Bernie Sanders.</p>
+        <div class="topic-media">
+          <div>
+            <img src="/static/img/bernie-vs-hillary.jpg" alt="Bernie vs. Hillary">
+            <p><a href="http://bernieorhillary.jaxbot.me/">Bernie vs. Hillary</a></p>
+          </div>
+          <div>
+            <iframe width="438" height="245" src="https://www.youtube.com/embed/2nwRiuh1Cug" frameborder="0" allowfullscreen></iframe>
+            <p><a href="https://www.youtube.com/channel/UCH1dpzjCEiGAt8CXkryhkZg">Bernie Sanders Youtube Channel</a></p>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="topic">
         <h3>Vote for Bernie in the primaries</h3>
-        <p>Learn more about your state's primary below.</p>
+        <p><a href="http://voteforbernie.org/" target="_blank">Learn more about your state's primary at voteforbernie.org</a></p>
       </div>
     </div>
 
@@ -48,7 +59,53 @@
         Bern<span class="logo-facts">Facts</span>.com
       </h1>
       <p>This website has no official relation to Bernie Sanders.</p>
+      <p>Created for free, with love, in Seattle, WA.
+        <a href="http://github.com/bhague1281" target="_blank">By Brian Hague.</a>
+      </p>
       <p>&copy; 2016 BernFacts.com</p>
+
     </footer>
+    <div id="bernrate">
+      <iframe src="http://www.bernrate.com/active" width="200" height="40"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+    <script>
+      var facts = [];
+
+      function getFact() {
+        var randomFact = Math.floor(Math.random() * facts.length);
+        return facts[randomFact];
+      }
+
+      function getSourceElement(source) {
+        var link = $('<a target="_blank"></a>').attr('href', source.link).text(source.name).wrap('<li></li>');
+        return $('<li></li>').append(link);
+      }
+
+      function addRandomFactToDOM() {
+        var newFact = getFact();
+        $('#quote').text(newFact.content);
+        $('#quote-context').text(newFact.subcontent);
+        $('#sources').html('');
+        newFact.sources.forEach(function(source) {
+          $('#sources').append(getSourceElement(source));
+        });
+      }
+
+      $(function() {
+        $('#contribute').click(function() {
+          $.smoothScroll({scrollTarget: '#contribute-topics'});
+        });
+
+        $('#new-quote').click(addRandomFactToDOM);
+
+        $.getJSON('/static/data.json').done(function(data) {
+          facts = data;
+          addRandomFactToDOM();
+        });
+      });
+    </script>
   </body>
 </html>
