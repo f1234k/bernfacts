@@ -83,11 +83,14 @@ button {
     align-items: center; }
     .topic-media iframe {
       width: 100%; } }
+html, body {
+  overflow-x: hidden; }
+
 body {
+  position: relative;
   font-family: "Roboto Slab", serif;
   background: #0066ba;
-  color: white;
-  overflow-x: hidden; }
+  color: white; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
