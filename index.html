@@ -26,6 +26,15 @@
     </script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1723323634572158";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <nav>
       <h1 class="logo">
         Bern<span class="logo-facts">Facts</span>.com
@@ -41,6 +50,7 @@
       <h2 id="fact">Loading...</h2>
       <div id="fact-context"></div>
       <ul id="sources"></ul>
+      <div class="fb-like" data-href="http://bernfacts.com" data-layout="button" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark"></div>
     </div>
     <div id="contribute-topics" class="contribute-topics">
       <hr>
