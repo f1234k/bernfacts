@@ -134,7 +134,7 @@
 
         $('#new-fact').click(addRandomFactToDOM);
 
-        $.getJSON('static/data.json').done(function(data) {
+        $.getJSON('/facts.json').done(function(data) {
           facts = data;
           addRandomFactToDOM();
         });
