@@ -2,8 +2,8 @@
   background: $color;
 
   &:hover {
-    background: lighten($color, 20%);
-
+    background: white;
+    color: $color;
   }
 
   -webkit-transition: background 500ms ease-in-out;
@@ -15,10 +15,9 @@
 button {
   margin: 1em;
   padding: 1em;
-  width: 10em;
+  width: 15em;
   border: 0;
   font-size: 1.2em;
-  border-radius: .3em;
   outline: 0;
 
   &.btn-red {

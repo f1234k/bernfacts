@@ -6,6 +6,7 @@
 
   .topic {
     padding: 3em 5%;
+    text-align: center;
 
     h3 {
       font-size: 2em;
@@ -29,6 +30,13 @@
     justify-content: space-around;
     padding: 1em;
     text-align: center;
+
+    .media-item {
+      width: 50%;
+      text-align: center;
+      padding: 1%;
+      box-sizing: border-box;
+    }
 
     p {
       padding: 1em;
